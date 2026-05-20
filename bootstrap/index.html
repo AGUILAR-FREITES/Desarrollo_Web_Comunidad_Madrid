@@ -15,8 +15,8 @@
         />
 
         <link rel="stylesheet" href="style.css">
+        <script src="../bootstrap/js/login.js"></script>
 
-        
     </head>
 
     <body>
@@ -298,9 +298,9 @@
 
     
     
-    <section class="central">
+        <section class="central">
 
-    </section>
+        </section>
 
 
     
@@ -311,34 +311,13 @@
     
     </div>       
 
-            
-
-
-            
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <!-- ========== Start Modal de login ========== -->
 
->
 
 <!-- Modal Body -->
 <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-<div
-    class="modal fade"
+<div class="modal fade"
     id="modalId"
     tabindex="-1"
     data-bs-backdrop="static"
@@ -346,12 +325,12 @@
     
     role="dialog"
     aria-labelledby="modalTitleId"
-    aria-hidden="true"
-    >
-    <div
-        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
-        role="document"
-    >
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-scrollable 
+                modal-dialog-centered modal-sm"
+        role="document">
+
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalTitleId">
@@ -361,71 +340,74 @@
                     type="button"
                     class="btn-close"
                     data-bs-dismiss="modal"
-                    aria-label="Close"
-                ></button>
+                    aria-label="Close">
+                </button>
             </div>
+
+
             <div class="modal-body">
-
-                <form action="">
-
+                <form name="Login">  
                     <div class="mb-3">
                         <label for="" class="form-label">Usuario</label>
+                        
                         <input
                             type="text"
                             class="form-control"
-                            name=""
+                            name="usuario"
                             id=""
                             aria-describedby="helpId"
                             placeholder=""
-                        />
-                        
+                            value=""/>
                     </div>
                     
-                </form>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Clave</label>
+                        <input
+                            type="password"
+                            class="form-control"
+                            name="password"
+                            id=""
+                            aria-describedby="helpId"
+                            placeholder=""
+                            value=""/>
+                    </div>
+                </form> 
+            </div>
 
-                <div class="mb-3">
-                    <label for="" class="form-label">Clave</label>
-                    <input
-                        type="password"
-                        class="form-control"
-                        name=""
-                        id=""
-                        aria-describedby="helpId"
-                        placeholder=""
-                    />
-                    
-                </div>
-                
+            <div class="modal-footer">
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+                    Cerrar
+                </button>
 
-                                                </div>
+                <button type="button" 
+                        class="btn btn-primary"  
+                        onclick="login()" target=""_blank>
+                        Entrar
+                </button>
+                <button type="button" 
+                        class="btn btn-primary">
+                        Registrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <!-- Optional: Place to the bottom of scripts -->
+    <script>
+        const myModal = new bootstrap.Modal(
+            document.getElementById("modalId"),
+            options,
+        );
+    </script>
 
-
-                                                <div class="modal-footer">
-                                                    <button
-                                                        type="button"
-                                                        class="btn btn-secondary"
-                                                        data-bs-dismiss="modal"
-                                                    >
-                                                        Cerrar
-                                                    </button>
-                                                    <button type="button" class="btn btn-primary">Entrar</button>
-                                                    <button type="button" class="btn btn-primary">Registrar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Optional: Place to the bottom of scripts -->
-                                    <script>
-                                        const myModal = new bootstrap.Modal(
-                                            document.getElementById("modalId"),
-                                            options,
-                                        );
-                                    </script>
-                                    
-                                    
-                                    <!-- ========== End Modal de login ========== -->
+    
+                <!-- ========== End Modal de login ========== -->
         </main>
+
         <footer>
             <!-- place footer here -->
         </footer>
@@ -435,5 +417,6 @@
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
             crossorigin="anonymous"
         ></script>
+
     </body>
 </html>
