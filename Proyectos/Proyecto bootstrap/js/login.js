@@ -7,7 +7,7 @@ function login(){
 
     if(usuario=="luis" && password=="123"){
     
-        window.open("/Desarrollo_Web_Comunidad_Madrid/bootstrap/html/Inventario.html", "_blank");
+        window.open("/Desarrollo_Web_Comunidad_Madrid/Proyectos/Proyecto bootstrap/html/Inventario.html", "_blank");
 
     }
 }
